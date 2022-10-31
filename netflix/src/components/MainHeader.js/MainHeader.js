@@ -23,7 +23,19 @@ const MainHeader = () => {
         <BsBell />
         <ProfileCtn>
           <ProfileBox />
-          <ProfileDetail />
+          <ProfileDetail>
+            <TopDetailBox>
+              <div>
+                {" "}
+                <ProfileBox />
+              </div>
+              <div>프로필관리</div>
+              <div>계정</div>
+              <div>고객센터</div>
+            </TopDetailBox>
+
+            <BottomDetailBox>로그아웃</BottomDetailBox>
+          </ProfileDetail>
         </ProfileCtn>
       </RightHeader>
     </MainHeaderCtn>
@@ -56,18 +68,39 @@ const NetflixImg = styled.div`
 
 const RightHeader = styled.div`
   height: 130px;
-  gap: 20px;
+  gap: 40px;
   display: flex;
   flex-direction: row;
 `;
 const ProfileDetail = styled.div`
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: aliceblue;
+  display: flex;
+  margin-top: 20px;
+  margin-left: -50px;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: #040402;
   display: none;
+  border: 2px solid #434341;
 `;
+const TopDetailBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+`;
+
+const BottomDetailBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #434341;
+  padding: 20px;
+`;
+
 const ProfileCtn = styled.div`
+  margin-top: -10px;
+  margin-right: 20px;
   width: 40px;
   height: 40px;
   &:hover {
