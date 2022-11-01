@@ -2,6 +2,7 @@ import React from "react";
 import MainHeader from "../components/MainHeader.js/MainHeader";
 import MainBody from "../components/MainBody.js/MainBody";
 import styled from "styled-components";
+import MainList from "../components/MainBody.js/MainList";
 const MainPage = () => {
   return (
     <Layout>
