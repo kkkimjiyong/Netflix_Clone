@@ -6,40 +6,40 @@ import MainList from "./MainList";
 const MainBody = () => {
   return (
     <>
-      <GradientBox>
-        <MoiveScreen>
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/brpNSXMpY28?autoplay=1&start=10&mute=1&controls=0&loop=1&playlist=brpNSXMpY28"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </MoiveScreen>
-        <TitleCtn>
-          <TitleTxt>환승연애</TitleTxt>
-          <BodyTxt>
-            다양한 이유로 이별한 커플들이 모여 지나간 사랑을 되짚고 새로운
-            사랑을 찾아나가는 연애 리얼리티
-          </BodyTxt>
-          <BtnBox>
-            <Button>재생</Button>
-            <Button className="DetailBtn">상세정보</Button>
-          </BtnBox>
-        </TitleCtn>
-      </GradientBox>
+      <MoiveScreen>
+        <iframe
+          width="80%"
+          height="80%"
+          src="https://www.youtube.com/embed/brpNSXMpY28?autoplay=1&start=10&mute=1&controls=0&loop=1&playlist=brpNSXMpY28"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </MoiveScreen>
+      <TitleCtn>
+        <TitleTxt>환승연애</TitleTxt>
+        <BodyTxt>
+          다양한 이유로 이별한 커플들이 모여 지나간 사랑을 되짚고 새로운 사랑을
+          찾아나가는 연애 리얼리티
+        </BodyTxt>
+        <BtnBox>
+          <Button>재생</Button>
+          <Button className="DetailBtn">상세정보</Button>
+        </BtnBox>
+      </TitleCtn>{" "}
+      <GradientBox></GradientBox>
       <MainList />
     </>
   );
 };
 
 const MoiveScreen = styled.div`
-  width: 2000px;
+  width: 2200px;
+  left: 70px;
+  top: -150px;
   height: 1600px;
   position: absolute;
-  z-index: -1;
 `;
 
 const GradientBox = styled.div`
@@ -48,10 +48,10 @@ const GradientBox = styled.div`
   align-items: center;
   position: relative;
   bottom: 470px;
-  left: 0px;
+  left: -100px;
+  z-index: 50;
   width: 2120px;
-  height: 1600px;
-  border: 2px solid black;
+  height: 1200px;
   background: rgb(0, 0, 0);
   background: linear-gradient(
     90deg,
@@ -64,24 +64,25 @@ const GradientBox = styled.div`
 
 const TitleCtn = styled.div`
   position: relative;
-  top: 150px;
-  left: -550px;
+  top: 250px;
+  left: 50px;
   width: 900px;
-  height: 600px;
+  height: 300px;
+  z-index: 60;
   /* background-color: aliceblue; */
 `;
 
 const TitleTxt = styled.div`
   color: white;
   padding: 50px 30px 0px 30px;
-  font-size: 100px;
-  letter-spacing: 30px;
+  font-size: 80px;
+  letter-spacing: 20px;
   font-weight: 900;
 `;
 
 const BodyTxt = styled.div`
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
   letter-spacing: 2px;
   padding: 30px;
@@ -96,12 +97,12 @@ const BtnBox = styled.div`
 
 const Button = styled.div`
   cursor: pointer;
-  font-size: 30px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 80px;
+  width: 140px;
+  height: 60px;
   border-radius: 10px;
   background-color: white;
   :hover {

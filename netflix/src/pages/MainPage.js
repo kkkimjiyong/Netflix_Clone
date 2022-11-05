@@ -13,8 +13,10 @@ const MainPage = () => {
 };
 
 const Layout = styled.div`
+  /* z-index: -1; */
   display: flex;
   flex-direction: column;
+  /* background-color: black; */
 `;
 
 export default MainPage;
